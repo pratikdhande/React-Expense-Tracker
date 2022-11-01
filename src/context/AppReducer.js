@@ -10,7 +10,7 @@ const AppReducer = (state, action) => {
         case 'ADD_TRANSACTION':
             return{
                 ...state,
-                transaction: [action.payload, ...state.transaction]
+                transactions: [action.payload, ...state.transactions]
             }
         default:
             return state;

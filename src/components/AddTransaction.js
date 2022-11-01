@@ -14,7 +14,7 @@ export const AddTransaction = () => {
         const newTransaction = {
            id: Math.floor(Math.random() * 100000000),
            text,
-           amount
+           amount: +amount
         }
         
         addTransaction(newTransaction);
@@ -22,7 +22,7 @@ export const AddTransaction = () => {
     }
     
   return (
-    <>
+    <div>
         <h3>Add new transaction</h3>
         <form onSubmit={onSubmit}>
         <div className="form-control">
@@ -37,6 +37,6 @@ export const AddTransaction = () => {
         </div>
         <button className="btn">Add transaction</button>
         </form> 
-    </>
+    </div>
   )
 }
